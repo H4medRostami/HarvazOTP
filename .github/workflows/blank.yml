@@ -24,4 +24,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: apt install pass oathtoll
+      run: sudo apt install pass oathtoll
