@@ -24,4 +24,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: 2fa.bash
+      run: apt install pass oathtoll
