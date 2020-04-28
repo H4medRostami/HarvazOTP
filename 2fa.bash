@@ -1,4 +1,4 @@
-#! bin/bash
+#!/usr/bin/bash
 
 #============================
 AUTHOR="Hamed Rostami"
