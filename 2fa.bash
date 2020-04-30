@@ -12,7 +12,7 @@ VERION="1.0.0"
 }
 
 get_otp_key(){
-     if provider=$(pass 2fa/"$1")
+    if provider=$(pass 2fa/"$1")
                 then
                     if result=$(oathtool --base32 --totp "$provider") 
                     then
@@ -21,7 +21,7 @@ get_otp_key(){
 
                      fi
                 fi
-sleep 20 && xclip -selection clipboard /dev/null&
+sleep 30 && xclip -selection clipboard /dev/null&
 return 
 }
 
