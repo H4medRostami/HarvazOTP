@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+#GENERAL
+
+FLUSH_CLIPBOARD_RANGE=30 #in second
 #============================
 AUTHOR="Hamed Rostami"
 EMAIL="hamedrostami@tuta.io"
@@ -17,11 +20,11 @@ get_otp_key(){
                     if result=$(oathtool --base32 --totp "$provider") 
                     then
                         echo $result|xclip -selection clipboard 
-                        printf "\e[7m\e[32mCopied  key to clipboard\e[0m,\e[91m\e[7mit will clear after \e[5m20 \e[25msecond.\e[0m\n"
+                        printf "\e[7m\e[32mCopied  key to clipboard\e[0m,\e[91m\e[7mit will clear after \e[5m"$FLUSH_CLIPBOARD_RANGE" \e[25msecond.\e[0m\n"
 
                      fi
                 fi
-sleep 30 && xclip -selection clipboard /dev/null&
+sleep $FLUSH_CLIPBOARD_RANGE && xclip -selection clipboard /dev/null&
 return 
 }
 
