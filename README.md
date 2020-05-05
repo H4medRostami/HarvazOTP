@@ -5,10 +5,12 @@ OTP password manager extention; free software-based authenticator that implement
 
 
 
-A)install dependencies (depend on your distro for example in debian: apt install -y pass oathtool )
+A)install dependencies (depend on your distro for example in debian: apt install -y pass oathtool gcc shc )
 
 1. pass
 2. oathtool
+3. gcc
+4. shc
 
 B) Setting pass up
 
@@ -36,11 +38,7 @@ If a git repository is initialized, pass creates a git commit each time the pass
 
 
 C)run HarvazOTP: 
+
+    cd HarvazOTP
+    make
      
-     bash ./2fa.bash
-     
-     
-     
-  for ease of use:
-  
- you can add 2fa.bash in any where and bind it alias in .bashrc ; also can compile and move it to /usr/bin (using gcc and shc package).
